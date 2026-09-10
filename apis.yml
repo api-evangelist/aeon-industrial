@@ -1,17 +1,34 @@
 aid: aeon-industrial
 name: Aeon Industrial
-description: 'Aeon Industrial is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Aeon Industrial is an American defense technology company, founded in 2023 and headquartered in
+  the Austin, Texas area, that designs and manufactures affordable precision tactical weapon systems.
+  Its two named products are ODIN, an autonomous precision targeting software package that observes,
+  detects, interrogates and neutralizes threats and is advertised as an open architecture installable
+  on third-party hardware, and Zeus, a modular software-defined tactical missile system powered by
+  ODIN. The company is vertically integrated, building in-house from commercially available
+  American-made components, and sells to U.S. and allied defense customers. Aeon publishes no public
+  developer program, API, SDK or machine-readable specification; its only public machine-readable
+  documents are the OpenID Connect and OAuth 2.0 discovery files served by its own WorkOS AuthKit
+  identity host for its login-gated partner portal.
+image: https://www.aeonindustrial.com/images/og-image.png
 url: https://raw.githubusercontent.com/api-evangelist/aeon-industrial/refs/heads/main/apis.yml
 x-type: company
-x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-source: "harvest:secondary-market"
 specificationVersion: '0.20'
 created: '2026-09-10'
 modified: '2026-09-10'
 tags:
 - Company
+- Defense
+- Defense Technology
+- Aerospace
+- Weapon Systems
+- Manufacturing
+- Autonomous Systems
+- Targeting Software
+- Hardware
+- Government
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +37,48 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.aeonindustrial.com/
+- type: About
+  url: https://www.aeonindustrial.com/who-we-are
+- type: Blog
+  url: https://www.aeonindustrial.com/news
+- type: Support
+  url: https://www.aeonindustrial.com/contact
+- type: Login
+  url: https://www.aeonindustrial.com/login
+- type: LinkedIn
+  url: https://www.linkedin.com/company/aeoninc/
+- type: WellKnown
+  url: well-known/aeon-industrial-well-known.yml
+- type: DomainSecurity
+  url: security/aeon-industrial-domain-security.yml
+- type: LLMsTxt
+  url: llms/aeon-industrial-llms.txt
+x-enrichment:
+  date: '2026-09-10'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Aeon Industrial builds precision tactical missile hardware and its embedded ODIN targeting
+    software as a delivered defense product, with no developer program of any kind — the marketing
+    site links only to /portal and /login, its ODIN page advertises an "open architecture" but
+    publishes no interface contract for it, and the only machine-readable documents served anywhere
+    are the WorkOS AuthKit OIDC and OAuth discovery files behind its partner-portal SSO.
+  evidence:
+  - url: https://www.aeonindustrial.com/
+    status: 200
+  - url: https://www.aeonindustrial.com/what-we-do/odin
+    status: 200
+  - url: https://www.aeonindustrial.com/openapi.json
+    status: 404
+  - url: https://www.aeonindustrial.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.aeonindustrial.com/llms.txt
+    status: 307
+  - url: https://auth.aeonindustrial.com/.well-known/openid-configuration
+    status: 200
+  checked: '2026-09-10'

@@ -64,5 +64,22 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aeon Industrial is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Aeon Industrial is an American defense technology company, founded in 2023 and headquartered in the
+Austin, Texas area, that designs and manufactures affordable precision tactical weapon systems. Its
+two named products are **ODIN**, an autonomous precision targeting software package, and **Zeus**, a
+modular software-defined tactical missile system powered by ODIN.
+
+**Aeon Industrial publishes no public API, SDK, developer portal, or machine-readable specification.**
+This profile records that honest absence. The only machine-readable documents served anywhere on the
+company's surface are the OpenID Connect and OAuth 2.0 discovery files on `auth.aeonindustrial.com`,
+Aeon's own WorkOS AuthKit identity host, which describe the SSO behind its login-gated partner portal
+rather than an API.
+
+- Website: https://www.aeonindustrial.com/
+- Who We Are: https://www.aeonindustrial.com/who-we-are
+- ODIN: https://www.aeonindustrial.com/what-we-do/odin
+- Zeus: https://www.aeonindustrial.com/what-we-do/zeus
+- News: https://www.aeonindustrial.com/news
+- Contact: https://www.aeonindustrial.com/contact
+- LinkedIn: https://www.linkedin.com/company/aeoninc/
+- Secondary-market listing (harvest source): https://www.nasdaqprivatemarket.com/company/aeon-industrial/

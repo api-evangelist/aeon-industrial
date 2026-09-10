@@ -1,0 +1,89 @@
+generated: '2026-09-10'
+method: probed
+source: >-
+  Live anonymous GET of the named /.well-known/ path list against every host this record knows:
+  the registrable domain (aeonindustrial.com), www, and the identity host auth.aeonindustrial.com.
+  Aeon Industrial publishes no API baseURL and no OpenAPI, so there are no additional servers[] hosts.
+notes: >-
+  Only auth.aeonindustrial.com serves real documents. It is Aeon Industrial's own WorkOS AuthKit
+  vanity host (DNS CNAME cname.workos-dns.com) and both documents self-identify with
+  issuer https://auth.aeonindustrial.com, so they are first-party to this company. They describe the
+  SSO behind the login-gated partner portal at /portal, NOT a public API authentication surface —
+  Aeon publishes no developer program. No security.txt, api-catalog, ai-plugin.json or agent card is
+  served anywhere.
+  IMPORTANT on the www host: an authenticated-by-default Next.js middleware answers 307 for every
+  unmatched path and lands on the AuthKit login page, so a naive follow-redirect probe records
+  HTTP 200 with a ~114KB HTML login body for paths that do not exist. Those are recorded below as
+  the 307 they actually returned and treated as misses; none of them is a document.
+hosts:
+- host: aeonindustrial.com
+  note: 301 redirects to www.aeonindustrial.com; probed via the www entry below.
+  documents: []
+- host: www.aeonindustrial.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 307
+    note: Redirects to the AuthKit login page. Not served.
+  - path: /.well-known/openid-configuration
+    status: 307
+    note: Redirects to the AuthKit login page. Not served.
+  - path: /.well-known/oauth-authorization-server
+    status: 307
+    note: Redirects to the AuthKit login page. Not served.
+  - path: /.well-known/api-catalog
+    status: 307
+    note: Redirects to the AuthKit login page. Not served.
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: auth.aeonindustrial.com
+  note: >-
+    Aeon Industrial's WorkOS AuthKit identity host, CNAME cname.workos-dns.com. First-party:
+    both served documents declare issuer https://auth.aeonindustrial.com.
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: aeon-industrial-openid-configuration.json
+    content_type: application/json; charset=utf-8
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: aeon-industrial-oauth-authorization-server.json
+    content_type: application/json; charset=utf-8
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+summary:
+  hosts_probed: 3
+  documents_served: 2
+  security_txt: false
+  api_catalog: false
+  agent_card: false
+  oauth_metadata: true
+oauth_metadata:
+  issuer: https://auth.aeonindustrial.com
+  provider: WorkOS AuthKit
+  scopes_supported:
+  - email
+  - offline_access
+  - openid
+  - profile
+  grant_types_supported:
+  - authorization_code
+  - client_credentials
+  - refresh_token
+  - 'urn:ietf:params:oauth:grant-type:device_code'
+  code_challenge_methods_supported:
+  - S256
+  note: >-
+    Read verbatim from the two saved discovery documents. These are the generic AuthKit defaults
+    for a portal login; no API scopes are published, so no scopes/ artifact is derived from them.
