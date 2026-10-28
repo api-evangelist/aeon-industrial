@@ -64,22 +64,81 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aeon Industrial is an American defense technology company, founded in 2023 and headquartered in the
-Austin, Texas area, that designs and manufactures affordable precision tactical weapon systems. Its
-two named products are **ODIN**, an autonomous precision targeting software package, and **Zeus**, a
-modular software-defined tactical missile system powered by ODIN.
+Aeon Industrial is an American defense technology company, founded in 2023 and headquartered in the Austin, Texas area, that designs and manufactures affordable precision tactical weapon systems. Its two named products are ODIN, an autonomous precision targeting software package that observes, detects, interrogates and neutralizes threats and is advertised as an open architecture installable on third-party hardware, and Zeus, a modular software-defined tactical missile system powered by ODIN. The company is vertically integrated, building in-house from commercially available American-made components, and sells to U.S. and allied defense customers. Aeon publishes no public developer program, API, SDK or machine-readable specification; its only public machine-readable documents are the OpenID Connect and OAuth 2.0 discovery files served by its own WorkOS AuthKit identity host for its login-gated partner portal.
 
-**Aeon Industrial publishes no public API, SDK, developer portal, or machine-readable specification.**
-This profile records that honest absence. The only machine-readable documents served anywhere on the
-company's surface are the OpenID Connect and OAuth 2.0 discovery files on `auth.aeonindustrial.com`,
-Aeon's own WorkOS AuthKit identity host, which describe the SSO behind its login-gated partner portal
-rather than an API.
+**Areas:** Company · Defense · Defense Technology · Aerospace · Weapon Systems · Manufacturing · Autonomous Systems · Targeting Software · Hardware · Government
 
-- Website: https://www.aeonindustrial.com/
-- Who We Are: https://www.aeonindustrial.com/who-we-are
-- ODIN: https://www.aeonindustrial.com/what-we-do/odin
-- Zeus: https://www.aeonindustrial.com/what-we-do/zeus
-- News: https://www.aeonindustrial.com/news
-- Contact: https://www.aeonindustrial.com/contact
-- LinkedIn: https://www.linkedin.com/company/aeoninc/
-- Secondary-market listing (harvest source): https://www.nasdaqprivatemarket.com/company/aeon-industrial/
+## Aeon Industrial on APIs.io
+
+Everything profiled for Aeon Industrial is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aeon-industrial/](https://apis.io/providers/aeon-industrial/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Aeon Industrial Domain Security](https://apis.io/security/aeon-industrial/aeon-industrial-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.aeonindustrial.com/)
+- [Support](https://www.aeonindustrial.com/contact)
+- [Blog](https://www.aeonindustrial.com/news)
+
+## API Evangelist rating
+
+**Kin Score 6.9** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 4.8 |
+| Access clarity | 6.6 |
+
+**Agent readiness 10.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aeon-industrial/](https://apis.io/providers/aeon-industrial/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Aeon Industrial: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aeon-industrial/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
